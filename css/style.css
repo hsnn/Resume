@@ -419,6 +419,13 @@ a.button {
     .tech-skill-list__item {
         margin-bottom: 15px
     }
+	.list{
+		margin-right:0;
+		margin-left:5px
+	}
+	.edu__logo{
+		display:none;
+	}
 }
 @media(min-width:750px) {
     .tech-skill-list__item {
@@ -685,7 +692,7 @@ a.button {
 }
 @media(min-width:750px) and (max-width:959px) {
     .project {
-        padding-right: 290px
+        padding-right: 0px
     }
     .project__thumb {
         width: 250px;
@@ -694,7 +701,7 @@ a.button {
 }
 @media(min-width:960px) {
     .project {
-        padding-right: 380px
+        padding-right: 0px
     }
     .project__thumb {
         width: 320px;
