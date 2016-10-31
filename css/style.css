@@ -775,11 +775,8 @@ function echo(stringA,stringB) {
 }
 /*Add CSS*/
 .arrow {
-  left: 10px;
-  top: 8px;
-  width: 15px;
-  height: 15px;
-  padding: 5px;
+  left: 18px;
+  top: 12px;
   line-height: 0;
   z-index: 1050;
   cursor: pointer;
@@ -821,3 +818,10 @@ function echo(stringA,stringB) {
 	transform:scale(1.2);
 	transition:transform .25s}
 .tech-skill-list__item__name .s{}
+.arrow-line-wrap{
+	width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 12px solid #333;
+    border-bottom: 8px solid transparent;
+}
