@@ -3,7 +3,7 @@ body {
     margin: 0;
     background: #fff;
     color: #333;
-    font-family: 'Pingfang SC','Lantinghei SC','Helvetica Neue',Helvetica,sans-serif;
+    font-family: 'Microsoft YaHei','Pingfang SC','Lantinghei SC','Helvetica Neue',Helvetica,sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: none;
@@ -49,6 +49,11 @@ a:hover {
     visibility: hidden;
     content: '.'
 }
+.fl{float:left;display:inline-block}
+
+.fr{float:right;display:inline-block}
+
+.relative{position:relative}
 @media(max-width:749px) {
     .boundary {
         margin: 0 20px;
@@ -256,7 +261,13 @@ a.button {
 .tech-skill-list__item {
     position: relative;
     -webkit-animation-duration: 1.5s;
-    animation-duration: 1.5s
+    animation-duration: 1.5s;
+	cursor:pointer;
+}
+.tech-skill-list__item:hover .tech-skill-list__item__name .n{
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    transition: transform 1.25s;
 }
 .tech-skill-list__item-html {
     -webkit-animation-name: bar-html;
@@ -279,114 +290,119 @@ a.button {
     }
 }
 .tech-skill-list__item-css {
-    width: 90%;
     -webkit-animation-name: bar-css;
     animation-name: bar-css
 }
+.tech-skill-list__item-css h4{width: 90%;}
+.tech-skill-list__item-css .tech-skill-list__item__detail{width: 90%;}
 @-webkit-keyframes bar-css {
     0% {
         width: 0
     }
-    100% {
-        width: 90%
+    90% {
+        width: 100%
     }
 }
 @keyframes bar-html-and-css {
     0% {
         width: 0
     }
-    100% {
-        width: 90%
+    90% {
+        width: 100%
     }
 }
 .tech-skill-list__item-JavaScript {
-    width: 75%;
     -webkit-animation-name: bar-JavaScript;
     animation-name: bar-JavaScript
 }
+.tech-skill-list__item-JavaScript h4{width: 75%;}
+.tech-skill-list__item-JavaScript .tech-skill-list__item__detail{width: 75%;}
 @-webkit-keyframes bar-JavaScript {
     0% {
         width: 0
     }
-    100% {
-        width: 75%
+    75% {
+        width: 100%
     }
 }
 @keyframes bar-JavaScript {
     0% {
         width: 0
     }
-    100% {
-        width: 75%
+    75% {
+        width: 100%
     }
 }
 .tech-skill-list__item-AJAX {
-    width: 60%;
     -webkit-animation-name: bar-AJAX;
     animation-name: bar-AJAX
 }
+.tech-skill-list__item-AJAX  h4{width: 60%;}
+.tech-skill-list__item-AJAX .tech-skill-list__item__detail{width: 60%;}
 @-webkit-keyframes bar-AJAX {
     0% {
         width: 0
     }
-    100% {
-        width: 60%
+    60% {
+        width: 100%
     }
 }
 @keyframes bar-AJAX {
     0% {
         width: 0
     }
-    100% {
-        width: 60%
+    60% {
+        width: 100%
     }
 }
 .tech-skill-list__item-AngularJS {
-    width: 55%;
     -webkit-animation-name: bar-AngularJS;
     animation-name: bar-AngularJS
 }
+.tech-skill-list__item-AngularJS h4{width:55%}
+.tech-skill-list__item-AngularJS .tech-skill-list__item__detail{width:55%}
 @-webkit-keyframes bar-AngularJS {
     0% {
         width: 0
     }
-    100% {
-        width: 55%
+    55% {
+        width: 100%
     }
 }
 @keyframes bar-AngularJS {
     0% {
         width: 0
     }
-    100% {
-        width: 55%
+    55% {
+        width: 100%
     }
 }
 .tech-skill-list__item-PHP {
-    width: 50%;
     -webkit-animation-name: bar-PHP;
     animation-name: bar-PHP
 }
-@-webkit-keyframes bar-PHP {
+.tech-skill-list__item-PHP h4{width:50%}
+.tech-skill-list__item-PHP .tech-skill-list__item__detail{width:50%}
+@-webkit-keyframes bar-PHP{
     0% {
-        width: 0
+        width: 
     }
-    100% {
-        width: 50%
+    50% {
+        width: 100%
     }
 }
 @keyframes bar-PHP {
     0% {
         width: 0
     }
-    100% {
-        width: 50%
+    50% {
+        width: 100%
     }
 }
 .tech-skill-list__item__name {
     height: 40px;
     line-height: 40px;
-    padding-left: 10px;
+    padding-left: 18px;
     overflow: hidden;
     border-left: 3px solid;
     color: #ff742a;
@@ -403,17 +419,20 @@ a.button {
     background-color: #d6efff;
     border-color: #3498db
 }
+
 .tech-skill-list__item__detail {
-    position: absolute;
-    left: 150px;
-    top: 12px;
+    /*position: absolute;
+    left: 100px;
+    top: 12px;*/
+	margin:0px 0 0 2px;
     z-index: 9999;
     max-width: 350px;
     padding: 10px;
     background: rgba(255,255,255,0.8);
-    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 10px rgba(0,0,0,0.5);
     border-radius: 4px;
-    display: none
+    display: none;
+	border-radius:0 0 10px 10px;
 }
 @media(max-width:749px) {
     .tech-skill-list__item {
@@ -431,10 +450,10 @@ a.button {
     .tech-skill-list__item {
         margin-bottom: 20px
     }
-    .tech-skill-list__item:hover .tech-skill-list__item__detail {
+    /*.tech-skill-list__item:hover .tech-skill-list__item__detail {
         display: block;
         font-size: .875em
-    }
+    }*/
     .fade {
         -webkit-animation: fadeIn .8s;
         animation: fadeIn .8s
@@ -754,3 +773,51 @@ function echo(stringA,stringB) {
 .project__thumb img {
     transition: all 0.3s;
 }
+/*Add CSS*/
+.arrow {
+  left: 10px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  line-height: 0;
+  z-index: 1050;
+  cursor: pointer;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+   
+}
+.arrow-line {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 2px;
+  width: 100%;
+  background: #000;
+  margin-top: 3px;
+}
+.arrow-line:first-child {
+  margin-top: 0;
+}
+.page-post-detail .sidebar-toggle-line {
+  background: #87daff;
+}
+.arrow-line-first{width: 50%; top: 2px; transform: rotateZ(-45deg); opacity: 1; right: 0px;}
+.arrow-line-middle{width: 100%; transform: rotateZ(0deg); opacity: 1; left: 0px; top: 0px;}
+.arrow-line-last{width: 50%; top: -2px; transform: rotateZ(45deg); opacity: 1; right: 0px;}
+.skill_flag_scale {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+	-webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+}
+.tech-skill-list__item__name .n{
+	-webkit-transform:scale(1.0);
+	transform:scale(1.0);
+	transition:transform .25s
+}
+.tech-skill-list__item__name .n:hover{
+	-webkit-transform:scale(1.2);
+	transform:scale(1.2);
+	transition:transform .25s}
+.tech-skill-list__item__name .s{}

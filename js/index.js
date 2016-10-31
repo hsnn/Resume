@@ -33,3 +33,21 @@ function hasClass(obj, cls){
     }
     return false;
 }
+
+//¼¼ÄÜÃ÷Ï¸ÇÐ»»
+	$(".tech-skill-list__item").click(function(){
+		$(".tech-skill-list__item__detail").each(function(){
+			if($(this).is(":visible")){
+				$(this).slideUp(300);
+				$(".arrow").removeClass("skill_flag_scale");
+			}
+		});
+		if($(this).find(".tech-skill-list__item__detail").is(":hidden")){
+			$(this).find(".tech-skill-list__item__detail").slideDown(400);
+			$(this).find(".arrow").addClass("skill_flag_scale");
+		}
+		else{
+			$(this).find(".tech-skill-list__item__detail").slideUp(300);
+			$(this).find(".arrow").removeClass("skill_flag_scale");
+		}
+	})
